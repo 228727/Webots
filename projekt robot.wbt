@@ -1,0 +1,75 @@
+#VRML_SIM R2020b utf8
+WorldInfo {
+  coordinateSystem "NUE"
+}
+Viewpoint {
+  orientation 0.3910446717704307 -0.9041261401168343 -0.17216267724855552 5.413650336865605
+  position 0.8563953664308408 0.7319099893248047 0.765988090601064
+}
+TinkerbotsBase {
+  translation 0 0.06 0
+  rotation 0 -1 0 0.261798
+  controller "my_controller"
+  upSlot TinkerbotsCube {
+    leftSlot TinkerbotsCube {
+      rightSlot TinkerbotsMotor {
+        rotation 0 0 1 1.5708
+        name "left_front_motor"
+        backSlot TinkerbotsAxle {
+          endSlot TinkerbotsWheel {
+          }
+        }
+      }
+    }
+    rightSlot TinkerbotsCube {
+      leftSlot TinkerbotsMotor {
+        rotation 0 0 1 1.5708003061004252
+        name "right_front_motor"
+        frontSlot TinkerbotsAxle {
+          endSlot TinkerbotsWheel {
+          }
+        }
+      }
+    }
+  }
+  downSlot TinkerbotsCube {
+    leftSlot TinkerbotsCube {
+      rightSlot TinkerbotsMotor {
+        rotation 0 0 1 -1.5708
+        name "right_rear_motor"
+        frontSlot TinkerbotsAxle {
+          endSlot TinkerbotsWheel {
+          }
+        }
+      }
+      frontSlot TinkerbotsDistanceSensor {
+        rotation 0 0 1 -1.5707996938995747
+        name "d_sensor"
+      }
+    }
+    rightSlot TinkerbotsCube {
+      leftSlot TinkerbotsMotor {
+        rotation 0 0 1 -1.5708
+        name "left_rear_motor"
+        backSlot TinkerbotsAxle {
+          endSlot TinkerbotsWheel {
+          }
+        }
+      }
+    }
+  }
+  extensionSlot [
+    HokuyoUrg04lxug01 {
+      translation 0 0.08 0
+      rotation 0 1 0 3.14159
+      name "lidar"
+    }
+  ]
+}
+RectangleArena {
+  wallHeight 0.2
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
