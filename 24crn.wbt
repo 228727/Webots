@@ -30,7 +30,7 @@ Robot {
       geometry Box {
         size 0.1 0.1 0.1
       }
-    }
+    } 
     Emitter {
     }
   ]
